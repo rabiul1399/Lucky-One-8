@@ -3,12 +3,11 @@ import './Product.css'
 
 
 const Product = (Props) => {
-    console.log(Props)
+ 
     const {product, deviceAddToCart} = Props;
-    const {name,img,price,Brand,ratings} = Props.product;
+    const {name,img,price,Brand,ratings} = product;
     return (
-        <div className='products'>  
-            
+        <div className='products'>             
                <img src={img} alt="" />
                 <div className='product-info'>
                     <p className='product-name'>{name}</p>

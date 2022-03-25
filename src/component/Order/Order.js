@@ -1,13 +1,12 @@
 import React from 'react';
 import './Order.css'
 const Order = (Props) => {
-    console.log('clicked')
-
+//   console.log(Props.order.length)
     return (
         <div>
             <div className='order'>
                 <h2>Selected Products</h2>
-                <h3>clicked deviced  </h3>
+                <h3>Ordered deviced {Props.order.length} </h3>
 
             </div>
             
