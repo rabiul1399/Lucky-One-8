@@ -1,8 +1,8 @@
 .shop-container{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
     padding-bottom: 50px;
-    
+    background-color: rgb(240, 244, 248);
 }
 .shoping-cart{
     display: grid;
@@ -12,3 +12,13 @@
     padding-right: 85px;
     gap:40px;
 }
+
+.order-cart{
+    background-color:rgb(233, 232, 232) ;
+}
+
+@media  screen and (max-width:750px) {
+    .shoping-cart{
+        grid-template-columns: repeat(1,1fr);
+    }
+};
