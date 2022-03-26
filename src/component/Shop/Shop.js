@@ -14,16 +14,21 @@ const Shop = () => {
     const [order, setOrder] = useState([]);
 
     const deviceAddToCart = (selectedProduct) =>{
-        // console.log(selectedProduct)
-
-        if(order.length < 4){
+        console.log(selectedProduct)
+       
             const newOrder = [...order,selectedProduct]
             setOrder(newOrder)
-        }
-        else{
-            alert('Not allowed 4 items over')
-        }
-        
+    
+    }
+
+    const randomNumber=() =>{
+        const random =[Math.round(Math.random()*order.length)]
+            if(!order.length){
+                alert("please select the product")
+               }
+               else{
+                alert("This Product Best For You"+" "+order[random].name)
+               }
     }
     //----------CLEAR ALL---
     const orderRest =() =>{
@@ -42,7 +47,16 @@ const Shop = () => {
                 }
             </div>
             <div className='order-cart'>
-                <Order order={order}></Order>
+            <h2>Selected Products</h2>
+               {
+                   order.map(selectedProduct => <Order selectedProduct={selectedProduct}
+                    randomNumber={randomNumber}
+                    orderRest={orderRest}
+                    ></Order>)
+               }
+                 <button onClick={randomNumber} >CHOOSE FOR 1 ME</button>
+            <br />
+            <button onClick={orderRest}>REMOVE ADD BUTTON</button>
             </div>
         </div>
     );

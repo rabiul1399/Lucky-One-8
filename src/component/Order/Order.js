@@ -1,28 +1,31 @@
 import React from 'react';
 import './Order.css'
 const Order = (Props) => {
-    const {order} = Props
+    const {name} = Props.selectedProduct;
+    const {randomNumber}=Props;
+    const {orderRest} =Props;
 
+//  console.log(order.indexOf())
 
-    const handleClick=() =>{
-        const maxNumber = order.length;
-const randomNumber = Math. floor((Math. random() * maxNumber) + 0);
-    
-    }
+//     const handleClick=() =>{
+//         const maxNumber = order.length;
+// const randomNumber = Math. floor((Math. random() * maxNumber) + 0);
+//     console.log(randomNumber)
+//     const rand = order.indexOf(randomNumber)
+//     // console.log(rand)
+
+// onClick={handleClick}
+//     }
     return (
         <div className='orderList'>
             <div className='order'>
-                <h2>Selected Products</h2>
-                <h3>Ordered deviced {order.length} </h3>
-                {
-                    order.map(cart =><h4>{cart.name}</h4>)
-                }
+              
+                <h4>{name}</h4>
+            
 
             </div>
 
-            <button onClick={handleClick}>CHOOSE FOR 1 ME</button>
-            <br />
-            <button>REMOVE ADD BUTTON</button>
+          
             
         </div>
     );
