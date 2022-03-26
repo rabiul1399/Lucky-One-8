@@ -4,35 +4,32 @@ import Product from '../Product/Product';
 import './Shop.css'
 const Shop = () => {
     const [devices,setDevice] =useState([]);
-    const [order, setOrder] = useState([]);
+
     useEffect(() =>{
         fetch('products.json')
         .then(res => res.json())
         .then(data =>setDevice(data))
     },[])
 
+    const [order, setOrder] = useState([]);
 
     const deviceAddToCart = (selectedProduct) =>{
         // console.log(selectedProduct)
 
-        const newOrder = [...order,selectedProduct]
-        setOrder(newOrder)
-        // const newOrder = [];
-
-        // const stands = order.find(product =>product.id ===);
-        // if(!stands){
-        //     selectedProduct.quentity=1;
-            // newOrder = [...order,selectedProduct]
-        // }
-        // else{
-        //     const rest = order.filter(product => product.id !==  selectedProduct.id) ;
-        //     stands.quentity = stands.quentity +1;
-        //     newOrder = [...rest , stands]
+        if(order.length < 4){
+            const newOrder = [...order,selectedProduct]
+            setOrder(newOrder)
         }
-
-    
-    // }
-
+        else{
+            alert('Not allowed 4 items over')
+        }
+        
+    }
+    //----------CLEAR ALL---
+    const orderRest =() =>{
+        const rest=[]
+        setOrder(rest);
+    }
 
     return (
         <div className='shop-container'>

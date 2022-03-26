@@ -2,3 +2,9 @@
 .order{
     text-align: center;
 }
+
+.orderList{
+    position: sticky;
+    top:0;
+    padding-right: 50px;
+}
