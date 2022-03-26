@@ -20,9 +20,9 @@
   
 }
 
-.order-cart{
+.cart{
     position: sticky;
-    top:0;
+    top:30px;
     padding-right: 50px;
 }
 

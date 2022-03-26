@@ -47,6 +47,7 @@ const Shop = () => {
                 }
             </div>
             <div className='order-cart'>
+            <div className='cart'>
             <h2>Selected Products</h2>
                {
                    order.map(selectedProduct => <Order selectedProduct={selectedProduct}                 
@@ -55,6 +56,7 @@ const Shop = () => {
                  <button className='btn-star' onClick={randomNumber} >CHOOSE FOR 1 ME</button>
             <br/> <br/>
             <button  className='btn-star' onClick={orderRest}>REMOVE ADD BUTTON</button>
+            </div>
             </div>
         </div>
     );
