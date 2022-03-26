@@ -27,7 +27,7 @@ const Shop = () => {
                 alert("please select the product")
                }
                else{
-                alert("This Product Best For You"+" "+order[random].name)
+                alert("This Product Best For You :"+" "+order[random].name)
                }
     }
     //----------CLEAR ALL---
@@ -49,14 +49,12 @@ const Shop = () => {
             <div className='order-cart'>
             <h2>Selected Products</h2>
                {
-                   order.map(selectedProduct => <Order selectedProduct={selectedProduct}
-                    randomNumber={randomNumber}
-                    orderRest={orderRest}
+                   order.map(selectedProduct => <Order selectedProduct={selectedProduct}                 
                     ></Order>)
                }
-                 <button onClick={randomNumber} >CHOOSE FOR 1 ME</button>
-            <br />
-            <button onClick={orderRest}>REMOVE ADD BUTTON</button>
+                 <button className='btn-star' onClick={randomNumber} >CHOOSE FOR 1 ME</button>
+            <br/> <br/>
+            <button  className='btn-star' onClick={orderRest}>REMOVE ADD BUTTON</button>
             </div>
         </div>
     );

@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# E-Techno
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+This is Live Website link:https://assingnment-8-react-e-teachno99.netlify.app/
+
 
 ## Available Scripts
 

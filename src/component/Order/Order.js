@@ -2,8 +2,8 @@ import React from 'react';
 import './Order.css'
 const Order = (Props) => {
     const {name} = Props.selectedProduct;
-    const {randomNumber}=Props;
-    const {orderRest} =Props;
+    // const {randomNumber}=Props;
+    // const {orderRest} =Props;
 
 //  console.log(order.indexOf())
 
@@ -17,16 +17,10 @@ const Order = (Props) => {
 // onClick={handleClick}
 //     }
     return (
-        <div className='orderList'>
+        <div className=''>
             <div className='order'>
-              
-                <h4>{name}</h4>
-            
-
-            </div>
-
-          
-            
+               <h4>{name}</h4>
+            </div>       
         </div>
     );
 };
